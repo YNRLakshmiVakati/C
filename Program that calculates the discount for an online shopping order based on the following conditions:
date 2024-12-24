@@ -1,0 +1,31 @@
+#include<stdio.h>
+void online_shopping(int order_amount,int dis,int pay_amount);
+int main()
+{
+    int order_amount,dis,pay_amount;
+    printf("Enter your order amount ");
+    scanf("%d",&order_amount);
+    online_shopping(order_amount,dis,pay_amount);
+    return 0;
+}
+void online_shopping(int order_amount,int dis,int pay_amount)
+{
+    if(order_amount>100)
+    {
+        printf("\nA 10% Discount is applied\n");
+        dis=((order_amount*10)/100);
+        pay_amount=order_amount-dis;
+        printf("payable amount is %d",pay_amount);
+    }
+    else if(order_amount>50 && order_amount<100)
+    {
+        printf("\nA 5% Discount is applied\n");
+        dis=((order_amount*5)/100);    
+        pay_amount=order_amount-dis;
+        printf("payable amount is %d",pay_amount);
+    }
+    else
+    {
+        printf("No Discount");
+    }
+}
