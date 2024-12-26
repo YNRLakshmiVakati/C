@@ -1,0 +1,37 @@
+#include<stdio.h>
+void accept(int a[10][10],int r,int c);
+void display(int a[10][10],int r,int c);
+int main()
+{
+    int a[10][10],r,c;
+    printf("\n Enter the oder of the matrix");
+    scanf("%d%d",&r,&c);
+    printf("\n Enter the values in matrix a \n");
+    accept(a,r,c);
+    printf("The matrix is\n");
+    display(a,r,c);
+    return 0;
+}
+void accept(int a[10][10],int r,int c)
+{
+    int i,j;
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+}
+void display(int a[10][10],int r,int c)
+{
+    int i,j;
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+}
