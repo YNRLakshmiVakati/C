@@ -1,0 +1,34 @@
+#include<stdio.h>
+int rev(int n)
+{
+     int rev_num=0;
+     while(n>0)
+     {
+         int rem=n%10;
+         rev_num=rev_num*10+rem;
+         n=n/10;
+     }
+     return rev_num;
+
+}
+void adam(int n)
+{
+    int sq_num=n*n;
+    int rev_num=rev(n);
+    int sq_rev=rev_num*rev_num;
+    int rev_sq_rev=rev(sq_rev);
+    if(rev_sq_rev==sq_num)
+    {
+        printf("Adam number");
+    }
+    else
+    {
+        printf("Not an Adam number");
+    }
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    adam(n);
+}
